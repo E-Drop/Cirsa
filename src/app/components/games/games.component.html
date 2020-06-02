@@ -1,0 +1,20 @@
+<div class="banner">
+    <h1>TU BAR EN CASA</h1>
+    <h4>¡TODAS las máquinas de BAR <span>abiertas</span>! ¡Siéntete como en el BAR y quédate en CASA!</h4>
+    <a href="/price"><button>¡Quieres un Premio!</button></a>
+</div>
+
+<div class="filters" id="games">
+    <button  id="todos"> Todas las Categorias</button>
+    <button  id="classics"> Tragamonedas Clasicas</button>
+    <button id="tresd"> Tragamonedas 3d</button>
+    <button id="bar"> Tragamonedas de Bar</button>
+    <button id="video"> Video Tragamonedas</button>
+</div>
+<ul>
+  
+    <li *ngFor="let game of games; let i = index" [class]="game.type" (click)="goToGame(i)" >
+      <img [src]="game.imgpath" />
+      <h3>{{game.name}}</h3>
+    </li>
+</ul>

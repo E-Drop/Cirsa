@@ -1,0 +1,37 @@
+<mat-sidenav-container class="aplication-container">
+
+  <mat-sidenav-content fixedInViewport="fixedTopGap">
+    <nav>
+      
+      <img src="/assets/slotcom_logo.png" />
+      <div class="wallet">
+        <img src="/assets/dollar.png" /><div id="counter" >758</div>
+      </div>
+      <div class="right-nav">
+        <div class="go-back">
+          <mat-icon aria-hidden="false" (click)="backClicked()" aria-label="arrow_back icon">arrow_back</mat-icon>
+        </div>
+        <div *ngIf="opened; then thenBlock else elseBlock"></div>
+          <ng-template #thenBlock><mat-icon aria-hidden="false" (click)="sidenav.toggle()" aria-label="menu_open icon">menu_open</mat-icon></ng-template>
+          <ng-template #elseBlock><mat-icon aria-hidden="false" (click)="sidenav.toggle()" aria-label="menu icon">menu</mat-icon></ng-template>
+      </div>
+      
+    </nav>
+    
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+  
+  <mat-sidenav #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')" position="end">
+    <div class="sidenav-controls">
+        <mat-icon aria-hidden="false" (click)="sidenav.toggle()" aria-label="arrow right icon">keyboard_arrow_right</mat-icon>
+    </div>
+    <ul>
+      <li><a href="/price">Recoger monedas</a></li>
+      <li><a href="/games">Juegos</a></li>
+    </ul>
+    
+  </mat-sidenav>
+</mat-sidenav-container>

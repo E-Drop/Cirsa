@@ -1,19 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { GamesComponent } from './components/games/games.component';
-import { SidenavComponent } from './components/shared/sidenav/sidenav.component';
-import {A11yModule} from '@angular/cdk/a11y';
-import {ClipboardModule} from '@angular/cdk/clipboard';
-import {DragDropModule} from '@angular/cdk/drag-drop';
-import {PortalModule} from '@angular/cdk/portal';
-import {ScrollingModule} from '@angular/cdk/scrolling';
-import {CdkStepperModule} from '@angular/cdk/stepper';
-import { FormsModule } from '@angular/forms';
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
@@ -48,78 +33,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {GamesService} from './services/games.service';
-import { GameComponent } from './components/game/game.component';
-import { LoadingComponent } from './components/shared/loading/loading.component';
-import { PriceComponent } from './components/price/price.component';
-import * as $ from 'jquery';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    GamesComponent,
-    SidenavComponent,
-    GameComponent,
-    LoadingComponent,
-    PriceComponent
-  ],
-  imports: [
-    FormsModule,
-    BrowserAnimationsModule,
-    BrowserModule,
-    AppRoutingModule,
-    A11yModule,
-    ClipboardModule,
-    CdkStepperModule,
-    CdkTableModule,
-    CdkTreeModule,
-    DragDropModule,
-    MatAutocompleteModule,
-    MatBadgeModule,
-    MatBottomSheetModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatStepperModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
-    MatTreeModule,
-    PortalModule,
-    ScrollingModule,
-  ],
+@module({
   exports: [
-    A11yModule,
-    ClipboardModule,
-    CdkStepperModule,
-    CdkTableModule,
-    CdkTreeModule,
-    DragDropModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -157,10 +73,8 @@ import * as $ from 'jquery';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
-  ],
-  providers: [
-    GamesService
-  ],
-  bootstrap: [AppComponent]
+  ]
 })
-export class AppModule { }
+export class DemoMaterialModule {}
+
+

@@ -1,0 +1,28 @@
+<div class="load-page">
+  <h1 *ngIf="game.name">{{game.name}}</h1>
+  <div class="cssload-dots">
+    <div class="cssload-dot"></div>
+    <div class="cssload-dot"></div>
+    <div class="cssload-dot"></div>
+    <div class="cssload-dot"></div>
+    <div class="cssload-dot"></div>
+  </div>
+  
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12" ></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0	0 1 0 0 0	0 0 1 0 0	0 0 0 18 -7" result="goo" ></feColorMatrix>
+        <!--<feBlend in2="goo" in="SourceGraphic" result="mix" ></feBlend>-->
+      </filter>
+    </defs>
+  </svg>
+  <div class="loading">
+    <h2>Loading</h2>
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+</div>
